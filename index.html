@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Jifer Carmona Villegas</h1>
+    <div class="social-links">
+        <a href=https://x.com/YiYi_cv02 class="twitter"target="_blank">twitter</a>
+        <a href=https://www.facebook.com/profile.php?id=100009414011649&mibextid=ZbWKwL class="facebook" target="_blank">Facebook</a>
+        <a href=https://www.instagram.com/_yiyi_1708?igsh=OTk1ZXBsbWx6OGI2 class="instagram" target="_blank">Instagram</a>
+       
+    </div>
+    <button class="button" onclick="toggleAboutMe()">Sobre mí</button>
+    <div id="about-me">
+        <div class="skill">
+            <img src="imagenes/python.webp" alt="Python">
+            <p>Python: 15%</p>
+        </div>
+        <div class="skill">
+            <img src="imagenes/java.png" alt="Java">
+            <p>Java: 0%</p>
+        </div>
+        <div class="skill">
+            <img src="imagenes/images.png" alt="CSS">
+            <p>CSS: 10%</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleAboutMe() {
+            var aboutMeSection = document.getElementById('about-me');
+            if (aboutMeSection.classList.contains('active')) {
+                aboutMeSection.classList.remove('active');
+            } else {
+                aboutMeSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
