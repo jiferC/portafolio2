@@ -29,6 +29,18 @@
             <p>CSS: 10%</p>
         </div>
     </div>
+    <button class="button" onclick="toggleContactForm()">Contacto</button>
+    <div id="contact-form" class="contact-form">
+        <form action="sen_message.py" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 
     <script>
         function toggleAboutMe() {
@@ -37,6 +49,15 @@
                 aboutMeSection.classList.remove('active');
             } else {
                 aboutMeSection.classList.add('active');
+            }
+        }
+
+        function toggleContactForm() {
+            var contactForm = document.getElementById('contact-form');
+            if (contactForm.classList.contains('active')) {
+                contactForm.classList.remove('active');
+            } else {
+                contactForm.classList.add('active');
             }
         }
     </script>
